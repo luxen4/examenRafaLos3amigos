@@ -1,0 +1,42 @@
+'''
+Mysql
+docker pull mysql
+docker run --name mysq -p 8889:3306 -v mysqlVolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql  OK
+mysql -u root -p    para entrar desde exec y a la cmd
+Enter password:my-secret-pw
+create database dataimport;
+use dataimport;
+meter las create tables a webbo 
+(están en otro archivo)
+
+
+Hacer un mongoVolume
+docker pull mongo
+docker run --name mongo -p 8888:27017 -v mongoVolume:/data/db -d mongo                                          OK  							
+docker exec -it mongo bash
+mongosh
+use dataimport
+
+
+
+neo4j
+docker pull neo4j
+docker run --publish=7474:7474 --publish=7687:7687 --volume=neo4jVolume:/data -d neo4j                          OK
+contraseña alberite   cuando se cambie
+http://localhost:7474/browser/
+python extension pack           como extensión
+
+'''
+
+
+pip
+'''
+Para importar desde la cmd
+https://stackoverflow.com/questions/32877671/importerror-no-module-named-mysql
+python3 -m pip install mysql-connector-python
+
+
+https://kb.objectrocket.com/mongo-db/python-mongoclient-examples-1050#:~:text=The%20MongoClient()%20class%20for,retrieving%20it%2C%20every%20connection%20matters.
+python3 -m pip install pymongo
+
+Instalar neo4j
